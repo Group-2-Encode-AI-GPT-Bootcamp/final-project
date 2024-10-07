@@ -15,7 +15,7 @@ export function LandingPageComponent() {
           <span className="sr-only">Web3 Risk Score</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-        <Link
+          <Link
             className="text-sm font-medium hover:underline underline-offset-4"
             href="#how-it-works"
           >
@@ -65,7 +65,7 @@ export function LandingPageComponent() {
               Our 10-Point Scoring System
             </h2>
             <p className="text-center mb-12 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-              We analyze various aspects of a project's Twitter presence to provide a comprehensive risk assessment. Here's what we look for:
+              We analyze various aspects of a project&apos;s Twitter presence to provide a comprehensive risk assessment. Here&apos;s what we look for:
             </p>
             <div className="grid gap-6 lg:grid-cols-2">
               {[
@@ -159,7 +159,7 @@ export function LandingPageComponent() {
           </div>
         </section>
       </main>
-      <FooterComponent/>
+      <FooterComponent />
     </div>
   );
 }
