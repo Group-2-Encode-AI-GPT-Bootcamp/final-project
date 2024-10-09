@@ -1,20 +1,12 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { ApiKeyContext } from "./ApiKeyContext";
 
 export function useApiKey() {
-  const [apiKey, setApiKey] = useState("");
+  const context = useContext(ApiKeyContext);
 
-  useEffect(() => {
-    // Load API key from localStorage on component mount
-    const storedApiKey = localStorage.getItem("openaiApiKey");
-    if (storedApiKey) {
-      setApiKey(storedApiKey);
-    }
-  }, []);
+  if (!context) {
+    throw new Error("useApiKey must be used within an ApiKeyProvider");
+  }
 
-  const updateApiKey = (newApiKey: string) => {
-    setApiKey(newApiKey);
-    localStorage.setItem("openaiApiKey", newApiKey);
-  };
-
-  return [apiKey, updateApiKey] as const;
+  return context;
 }

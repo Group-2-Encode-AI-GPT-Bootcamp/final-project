@@ -7,11 +7,16 @@ import { Input } from "@/components/ui/input";
 import { useApiKey } from "@/hooks/useApiKey";
 
 export default function MaskedAPIKey() {
-  const [apiKey, updateApiKey] = useApiKey();
+  const { apiKey, updateApiKey } = useApiKey();
   const [showApiKey, setShowApiKey] = useState(false);
 
   const handleApiKeyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     updateApiKey(e.target.value);
+  };
+
+  const handleApiKeyPaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+    const pastedText = e.clipboardData.getData("text");
+    updateApiKey(pastedText);
   };
 
   const maskApiKey = (key: string) => {
@@ -34,6 +39,7 @@ export default function MaskedAPIKey() {
             type={showApiKey ? "text" : "password"}
             value={apiKey}
             onChange={handleApiKeyChange}
+            onPaste={handleApiKeyPaste}
             className="pr-10"
             placeholder="Enter your OpenAI API key"
           />
