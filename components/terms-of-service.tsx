@@ -1,25 +1,12 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ShieldCheck } from "lucide-react"
 import { FooterComponent } from "./footer"
+import { HeaderComponent } from "./header"
 
 export function TermsOfServiceComponent() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="/">
-          <ShieldCheck className="h-6 w-6" />
-          <span className="ml-2 text-lg font-semibold">Web3 Risk Score</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/">
-            Home
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/privacy">
-            Privacy Policy
-          </Link>
-        </nav>
-      </header>
+      <HeaderComponent/>
       <main className="flex-1 container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Terms of Service</h1>
         <div className="space-y-4">
