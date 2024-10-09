@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { openai } from '@ai-sdk/openai';  // Assuming this is part of some SDK you're using
+import { openai } from '@ai-sdk/openai';
 import { generateText } from 'ai';
 import puppeteer, { Page } from 'puppeteer';
 
