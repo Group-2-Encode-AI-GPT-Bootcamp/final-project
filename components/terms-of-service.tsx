@@ -1,5 +1,3 @@
-'use client'
-
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ShieldCheck } from "lucide-react"
@@ -83,7 +81,7 @@ export function TermsOfServiceComponent() {
           </Button>
         </div>
       </main>
-      <FooterComponent/>
+      <FooterComponent />
     </div>
   )
 }

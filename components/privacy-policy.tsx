@@ -1,5 +1,3 @@
-'use client'
-
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ShieldCheck } from "lucide-react"
@@ -86,7 +84,7 @@ export function PrivacyPolicyComponent() {
           </Button>
         </div>
       </main>
-      <FooterComponent/>
+      <FooterComponent />
     </div>
   )
 }
