@@ -1,40 +1,13 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { FooterComponent } from "./footer";
+import { HeaderComponent } from "./header";
 
 export function LandingPageComponent() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
-          <ShieldCheck className="h-6 w-6" />
-          <span className="sr-only">Web3 Risk Score</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#how-it-works"
-          >
-            How It Works
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#features"
-          >
-            Features
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#get-started"
-          >
-            Get Started
-          </Link>
-        </nav>
-      </header>
+      <HeaderComponent />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6 mx-auto max-w-[1200px]">
@@ -50,7 +23,12 @@ export function LandingPageComponent() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button>Get Started</Button>
+                <Link
+                  className="text-sm font-medium hover:underline underline-offset-4"
+                  href="/dashboard"
+                >
+                  <Button>Get Started</Button>
+                </Link>
                 <Button variant="outline">Learn More</Button>
               </div>
             </div>
@@ -153,7 +131,11 @@ export function LandingPageComponent() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <Button className="w-full">Try It Now</Button>
+                <Link
+                  href="/dashboard"
+                >
+                  <Button className="w-full">Try It Now</Button>
+                </Link>
               </div>
             </div>
           </div>
