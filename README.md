@@ -2,6 +2,8 @@
 
 This project is an AI-powered tool that generates risk scores for Web3 projects based on their Twitter presence. It uses a 10-point scoring system to provide a comprehensive assessment, helping users make informed decisions in the crypto space.
 
+![Project Screenshot](./image.png)
+
 ## Features
 
 - Quick assessment using just a Twitter handle
@@ -33,6 +35,16 @@ This project is an AI-powered tool that generates risk scores for Web3 projects 
    npm install
    ```
 
+4. Set up environment variables:
+- Create a file named `.env.local` in the root of your project
+- Add your OpenAI API key to the file:
+  ```
+  OPENAI_API_KEY=your_api_key_here
+  ```
+
+
+Replace `your_api_key_here` with your actual OpenAI API key.
+
 ### Running the Application
 
 1. Start the development server:
@@ -46,7 +58,6 @@ This project is an AI-powered tool that generates risk scores for Web3 projects 
 
 - `app/`: Contains the main application code (Next.js App Router)
 - `components/`: Reusable React components
-- `public/`: Static assets
 
 ## Technologies Used
 
@@ -54,6 +65,8 @@ This project is an AI-powered tool that generates risk scores for Web3 projects 
 - React
 - Tailwind CSS
 - Shadcn UI
+- OpenAI SDKs
+- Puppeteer for web scraping
 
 ## Contributing
 
